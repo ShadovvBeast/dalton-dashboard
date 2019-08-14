@@ -9,7 +9,7 @@ const SensorData = require('../models/SensorData');
 // @desc Get sensor data
 // @access Public
 router.get('/', (req, res) => {
-    SensorData.find().sort({timestamp: -1}).then(items => res.json(items));
+    SensorData.find().sort({timestamp: 1}).then(items => res.json(items));
 });
 
-module.exports = router;
+module.exports = router; 
