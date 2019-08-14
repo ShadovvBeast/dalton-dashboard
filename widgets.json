@@ -1,0 +1,1 @@
+{"_id":{"$oid":"5d486841fc247a46181065f4"},"widget_name":"Temperature Graph","sensor_ids":["Temp_1_1_1"],"graph_type":"line","location":{"x":{"$numberInt":"0"},"y":{"$numberInt":"0"}},"size":{"height":{"$numberInt":"300"},"width":{"$numberInt":"300"}}}

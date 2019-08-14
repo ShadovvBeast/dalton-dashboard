@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5d455f793922364658aafe3e"},"sensor_type":"Test sensor","timestamp":{"$date":{"$numberLong":"1564827513896"}},"sensor_id":"Temp_1_1_1","data":{"temp":{"$numberDouble":"28.52"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5d4d7d349a034c4618fe96b7"},"sensor_type":"Test sensor","timestamp":{"$date":{"$numberLong":"1564827515896"}},"sensor_id":"Temp_1_1_1","data":{"temp":{"$numberDouble":"30.21"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5d4d7dbc9a034c4618fe96b8"},"sensor_type":"Test sensor","timestamp":{"$date":{"$numberLong":"1564827517896"}},"sensor_id":"Temp_1_1_1","data":{"temp":{"$numberDouble":"29.03"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5d4d7dde9a034c4618fe96b9"},"sensor_type":"Test sensor","timestamp":{"$date":{"$numberLong":"1564827519896"}},"sensor_id":"Temp_1_1_1","data":{"temp":{"$numberDouble":"31.16"}},"__v":{"$numberInt":"0"}}
