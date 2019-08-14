@@ -9,10 +9,8 @@ const Widget = require('../models/Widget');
 // @desc Get sensor data
 // @access Public
 router.get('/', (req, res) => Widget.find().then(items => res.json(items)));
-router.post('/', (req, res) => Widget.findById((err, widget) => {
-    if(err)
-        res.status(500).send(err);
-    widget.size = req.body.size;
-    widget.save((widget) => res.send(widget));
-}))
+router.post('/', (req, res) => Widget.findByIdAndUpdate(req.body.id, 
+                                                        {size: req.body.size}, 
+                                                        (err, widget) => err ? res.status(500).send(err) : 
+                                                                               res.send(widget)));
 module.exports = router;
