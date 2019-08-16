@@ -4,6 +4,7 @@ import { Resizable, ResizableBox } from 'react-resizable';
 import { observer } from 'mobx-react-lite';
 import StoreContext from './../Store'
 import Graph from './Graph'
+import { PromiseProvider } from 'mongoose';
 
 let fetch_semaphore = false;
 
@@ -12,22 +13,14 @@ const Widget = observer((props) => {
   const onResize = (event, { element, size, handle }) => {
     props.widget.size.height = size.height;
     props.widget.size.width = size.width;
-    if (!fetch_semaphore) {
-      fetch_semaphore = true;
-      fetch('http://localhost:5000/widgets/', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ id: props.widget._id, size })
-      }).then(() => fetch_semaphore = false);
-    }
-    //window.dispatchEvent(new Event('resize'));
   };
+  const onDragStop = (e, elem) => {
+    props.widget.location.x = elem.x;
+    props.widget.location.y = elem.y;
+  } 
   const store = useContext(StoreContext);
   return (
-    <Draggable handle="strong">
+    <Draggable handle="strong" defaultPosition={props.widget.location} onStop={onDragStop}>
       <div>
         <ResizableBox height={props.widget.size.height} width={props.widget.size.width} resizeHandles={['se']} onResizeStop={onResize} >
           <strong className="handle">✥</strong>
