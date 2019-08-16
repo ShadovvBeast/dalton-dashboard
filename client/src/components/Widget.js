@@ -35,6 +35,7 @@ const Widget = observer((props) => {
             {props.widget.sensor_ids.map((sensor_id, index) =>
               <Graph 
                 key={sensor_id + '_' + index}
+                type={props.widget.graph_type}
                 title={props.widget.widget_name}
                 width={props.widget.size.width}
                 height={props.widget.size.height}
