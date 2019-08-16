@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Widget from './components/Widget'
-import Graph from './components/Graph'
 import StoreContext from './Store'
 import './App.css';
 import { observer } from 'mobx-react-lite';

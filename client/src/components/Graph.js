@@ -10,7 +10,7 @@ const Graph = observer((props)=> {
       text: props.title
     },
     series: [{
-      data: props.data
+      data: props.data.map(x => x.temp)
     }],
     chart: {height: props.height, width: props.width},
     credits: {
@@ -18,7 +18,6 @@ const Graph = observer((props)=> {
       href: 'http://www.dalton.farm/'
     }
   });
-
 
   useEffect(
     () => 

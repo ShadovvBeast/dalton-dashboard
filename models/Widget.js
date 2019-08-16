@@ -10,6 +10,9 @@ const WidgetSchema = new mongoose.Schema({
     graph_type: {
         type: String
     },
+    size: {
+        type: Object
+    },
     location: {
         type: Object
     }

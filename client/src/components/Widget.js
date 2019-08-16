@@ -38,7 +38,7 @@ const Widget = observer((props) => {
                 title={props.widget.widget_name}
                 width={props.widget.size.width}
                 height={props.widget.size.height}
-                data={store.sensor_data.filter(sensor => sensor.sensor_id == sensor_id).map(sensor => sensor.data.temp)} />
+                data={store.sensor_data.filter(sensor => sensor.sensor_id == sensor_id).map(sensor => sensor.data)} />
             )}
           </div>
         </ResizableBox>
